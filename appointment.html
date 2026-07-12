@@ -859,30 +859,35 @@
         
         <!-- Step 3: Cancellation Agreement -->
         <div class="booking-step" id="stepContent3">
-          <h4>第三步：確認排刀取消懲罰規則</h4>
+          <h4>第三步：確認排刀取消與更改規則</h4>
           <p style="font-size:13px; color:var(--text-light)">為避免珍貴醫療手術資源被隨意取消，本系統制定了合理的預訂/改期/取消的限制機制：</p>
           
           <div class="penalty-callout">
-            <h5>⚠️ 預約取消懲罰條款 (請仔細閱讀)：</h5>
+            <h5>⚠️ 預約取消更改條款 (請仔細閱讀)：</h5>
             <ul class="penalty-list">
-              <li><strong>1. 三天內取消：</strong> 手術前 3 天內（含）臨時取消，下次重新預約限掛 <strong>2 個月後</strong>。</li>
-              <li><strong>2. 一天內取消：</strong> 於手術前一天（24小時內臨時取消），下次重新預約限掛 <strong>2年後（24個月）</strong>。</li>
-              <li><strong>3. 黑名單機制：</strong> 系統會於 7 天前、3 天前發送確認。若您已確認照常且不改期，卻於手術前一天臨時取消，<strong>列為拒絕往來戶</strong>，未來將無法使用此系統預約。</li>
+              <li><strong>1. 七天前取消：</strong> 手術前 7 天前（含）臨時取消，下次重新預約限掛 <strong>1 個月後</strong>。</li>
+              <li><strong>2. 三天前取消：</strong> 手術前 3 天前（含）臨時取消，下次重新預約限掛 <strong>2 個月後</strong>。</li>
+              <li><strong>3. 一天前取消：</strong> 於手術前一天，下次重新預約限掛 <strong>6個月後</strong>。</li>
+              <li><strong>4. 24小時內取消或無故不報到：</strong> 系統會於 7 天前、3 天前發送確認。若您已確認照常且不改期，卻於手術24小時內臨時取消或無故不報到，下次重新預約限掛 <strong>2年後（24個月）</strong>。</li>
             </ul>
           </div>
           
           <div class="checkbox-group">
             <label class="checkbox-label">
               <input type="checkbox" id="checkPenalty1">
-              <span>我已理解並同意：<strong>手術前 3 天內</strong>取消者，將被限制 <strong>2 個月內</strong> 無法重新預約手術。</span>
+              <span>我已理解並同意：<strong>手術前 7 天前（含）</strong>取消者，下次重新預約限掛 <strong>1 個月後</strong>。</span>
             </label>
             <label class="checkbox-label">
               <input type="checkbox" id="checkPenalty2">
-              <span>我已理解並同意：<strong>於手術前一天（24小時內臨時取消）</strong>者，將被限制 <strong>2年內（24個月）</strong> 無法重新預約手術。</span>
+              <span>我已理解並同意：<strong>手術前 3 天前（含）</strong>取消者，下次重新預約限掛 <strong>2 個月後</strong>。</span>
             </label>
             <label class="checkbox-label">
               <input type="checkbox" id="checkPenalty3">
-              <span>我已理解並同意：<strong>確認照常後仍於前一天臨時取消</strong>者，將被列為系統<strong>黑名單拒絕預約</strong>。</span>
+              <span>我已理解並同意：<strong>於手術前一天</strong>取消者，下次重新預約限掛 <strong>6個月後</strong>。</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="checkPenalty4">
+              <span>我已理解並同意：<strong>手術 24 小時內臨時取消或無故不報到</strong>者，下次重新預約限掛 <strong>2年後（24個月）</strong>。</span>
             </label>
           </div>
         </div>
@@ -950,10 +955,11 @@
     {
       keywords: ['取消', '改期', '預約', '規則', '三天', '一天', '黑名單', '懲罰'],
       reply: '關於<strong>排刀預約與取消規則</strong>，我們實施了合理的預訂/改期/取消的限制機制：<br>' +
-             '1. <strong>術前三天內取消：</strong>下次重新預約限掛 2 個月後。<br>' +
-             '2. <strong>於手術前一天（24小時內臨時取消）：</strong>下次重新預約限掛 2年後（24個月）。<br>' +
-             '3. <strong>確認後又臨時取消：</strong>列入黑名單，未來無法線上預約。<br>' +
-             '這項限制能讓每位需要手術的病人都能公平且效率地使用手術時間。若您有不可抗力因素，亦可透過留言板與助理聯繫說明，避免直接衝突。'
+             '1. <strong>七天前取消：</strong>手術前 7 天前（含）臨時取消，下次重新預約限掛 1 個月後。<br>' +
+             '2. <strong>三天前取消：</strong>手術前 3 天前（含）臨時取消，下次重新預約限掛 2 個月後。<br>' +
+             '3. <strong>一天前取消：</strong>於手術前一天，下次重新預約限掛 6個月後。<br>' +
+             '4. <strong>24小時內取消或無故不報到：</strong>若於手術24小時內臨時取消或無故不報到，下次重新預約限掛 2年後（24個月）。<br>' +
+             '這項限制能讓每位需要手術的病人都能公平且效率地使用手術時間。若您有不可抗力因素，亦可透過留言板與助理團隊溝通，避免直接衝突。'
     },
     {
       keywords: ['關節', '膝蓋', '保膝', '人工關節', '換關節', '退化'],
@@ -1135,9 +1141,10 @@
       const c1 = document.getElementById('checkPenalty1').checked;
       const c2 = document.getElementById('checkPenalty2').checked;
       const c3 = document.getElementById('checkPenalty3').checked;
+      const c4 = document.getElementById('checkPenalty4').checked;
       
-      if (!c1 || !c2 || !c3) {
-        alert('您必須閱讀並勾選同意所有預約取消懲罰條款，方可送出手術排刀申請。');
+      if (!c1 || !c2 || !c3 || !c4) {
+        alert('您必須閱讀並勾選同意所有預約取消與更改條款，方可送出手術排刀申請。');
         return;
       }
       
@@ -1158,6 +1165,7 @@
       document.getElementById('checkPenalty1').checked = false;
       document.getElementById('checkPenalty2').checked = false;
       document.getElementById('checkPenalty3').checked = false;
+      document.getElementById('checkPenalty4').checked = false;
       updateStepsUI();
     }
   }
@@ -1205,7 +1213,7 @@
         </div>
         <div>
           王廷明醫師排刀提醒：您預約了 <strong>${savedData.date}</strong> 進行手術，目前距離手術還有 7 天。<br><br>
-          為保障資源，請點選下方按鈕確認您的行程。如有疑問，可直接點選「留言諮詢」由 AI 或助理為您解答。
+          為保障資源，請點選下方按鈕確認您的行程。根據規定，若此時改期或取消，下次重新預約限掛 1 個月後。
         </div>
         <div class="sim-btn-group">
           <button class="sim-btn sim-btn-confirm" onclick="simConfirm(7, this)">確認照常進行</button>
@@ -1224,8 +1232,10 @@
           <span>限時通牒</span>
         </div>
         <div>
-          王廷明醫師排刀【最後確認】：您預約了 3 天後的手術。<strong>若在 3 天內取消，下次預約須等待 2 個月</strong>。<br><br>
-          請立即點選按鈕回覆，未回覆者系統將自動致電確認，避免醫療資源閒置。
+          王廷明醫師排刀【最後確認】：您預約了 3 天後的手術。<br>
+          * 3 天前（含）取消需等 <strong>2 個月</strong>。<br>
+          * 1 天前取消需等 <strong>6 個月</strong>。<br>
+          * 24小時內取消或不報到則限制 <strong>2 年（24個月）</strong>。
         </div>
         <div class="sim-btn-group">
           <button class="sim-btn sim-btn-confirm" onclick="simConfirm(3, this)">確認照常進行</button>
@@ -1252,7 +1262,7 @@
     msgDiv.style.borderLeft = '3px solid var(--success)';
     msgDiv.innerHTML = `
       <div style="font-size:11px;">
-        <strong>系統回覆：</strong> 感謝您的確認！我們已為您鎖定 <strong>${savedData.date}</strong> 的手術室與王廷明醫師團隊。請開始進行術前準備，並注意不要吃太油膩、術前禁食等醫囑。
+        <strong>系統回覆：</strong> 感謝您的確認！我們已為您鎖定 <strong>${savedData.date}</strong> 的手術室與王廷明醫師團隊。請開始進行術前準備，並注意禁食等醫囑。
       </div>
     `;
     simBody.appendChild(msgDiv);
@@ -1261,26 +1271,26 @@
 
   function simResched(days, btn) {
     if (days === 7) {
-      const confirmCancel = confirm("您正在申請改期/取消手術。由於目前距離手術尚有 7 天，取消不會面臨限制。是否確認取消？");
+      const confirmCancel = confirm("您正在申請改期/取消手術。由於目前距離手術為 7 天前（含），取消後您下次將被限制在「1個月後」才能預約手術。\n是否確認取消？");
       if (confirmCancel) {
         btn.parentElement.innerHTML = `
           <div style="background:var(--warning-soft); color:var(--warning); font-size:11px; padding:6px; border-radius:6px; width:100%; text-align:center; font-weight:bold;">
-            ⚠️ 已申請改期/取消（無懲罰限制）
+            ⚠️ 已申請改期/取消（下次預約限1個月後）
           </div>
         `;
         const msgDiv = document.createElement('div');
         msgDiv.className = 'sim-msg';
         msgDiv.innerHTML = `
           <div style="font-size:11px;">
-            <strong>系統回覆：</strong> 手術已取消。由於您在術前 7 天提出，<strong>並無任何限制</strong>。您可以隨時重新安排手術時間。
+            <strong>系統回覆：</strong> 手術已取消。系統已記錄：<strong>病患限制重新預約 1 個月（至 2026/08/12）</strong>。
           </div>
         `;
         simBody.appendChild(msgDiv);
         simBody.scrollTop = simBody.scrollHeight;
       }
     } else if (days === 3) {
-      const confirmCancel = confirm("警告：您正在手術前 3 天內申請取消！\n依條款規定，取消後您下次將被限制在「兩個月後」才能預約手術。\n是否仍要取消？");
-      if (confirmCancel) {
+      const cancelOption = prompt("警告：您正在手術前 3 天內申請取消！請選擇您的取消時間以進行限制模擬：\n輸入 3 : 代表 3 天前(含)取消 (限2個月)\n輸入 1 : 代表 1 天前取消 (限6個月)\n輸入 24 : 代表 24小時內取消/無故不報到 (限2年)\n請輸入數字 (3 / 1 / 24)：");
+      if (cancelOption === '3') {
         btn.parentElement.innerHTML = `
           <div style="background:var(--danger-soft); color:var(--danger); font-size:11px; padding:6px; border-radius:6px; width:100%; text-align:center; font-weight:bold;">
             🚫 已強制取消（下次預約限兩個月後）
@@ -1296,6 +1306,40 @@
         `;
         simBody.appendChild(msgDiv);
         simBody.scrollTop = simBody.scrollHeight;
+      } else if (cancelOption === '1') {
+        btn.parentElement.innerHTML = `
+          <div style="background:var(--danger-soft); color:var(--danger); font-size:11px; padding:6px; border-radius:6px; width:100%; text-align:center; font-weight:bold;">
+            🚫 已強制取消（下次預約限六個月後）
+          </div>
+        `;
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'sim-msg';
+        msgDiv.style.borderLeft = '3px solid var(--danger)';
+        msgDiv.innerHTML = `
+          <div style="font-size:11px; color:var(--danger)">
+            <strong>系統處分限制：</strong> 手術已取消。系統已記錄：<strong>病患限制重新預約 6 個月（至 2027/01/12）</strong>。
+          </div>
+        `;
+        simBody.appendChild(msgDiv);
+        simBody.scrollTop = simBody.scrollHeight;
+      } else if (cancelOption === '24') {
+        btn.parentElement.innerHTML = `
+          <div style="background:var(--danger-soft); color:var(--danger); font-size:11px; padding:6px; border-radius:6px; width:100%; text-align:center; font-weight:bold;">
+            🚫 已強制取消（下次預約限兩年後）
+          </div>
+        `;
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'sim-msg';
+        msgDiv.style.borderLeft = '3px solid var(--danger)';
+        msgDiv.innerHTML = `
+          <div style="font-size:11px; color:var(--danger)">
+            <strong>系統處分限制：</strong> 手術已取消。系統已記錄：<strong>病患限制重新預約 2 年（至 2028/07/12）</strong>。
+          </div>
+        `;
+        simBody.appendChild(msgDiv);
+        simBody.scrollTop = simBody.scrollHeight;
+      } else if (cancelOption !== null) {
+        alert("無效輸入，模擬取消已取消。");
       }
     }
   }
